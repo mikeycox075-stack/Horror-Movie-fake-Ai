@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --page-bg: black;
+    --ui-bg: #111;
+    --accent: #2a2a2a;
+}
+
+body {
+    margin: 0;
+    background: var(--page-bg);
+    font-family: Arial;
+    color: white;
+    transition: background 1s ease;
+}
+/*ajusting the body*/
+
+.chat-container {
+    width: 360px;
+    height: 600px;
+    margin: 40px auto;
+    background: var(--ui-bg);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
+    box-shadow:
+        0 0 8px rgba(255,0,0,0.2),
+        0 0 16px rgba(255,0,0,0.25);
+}
+/*ajusting how the whole chat looks for the chatbot*/
+
+.chat-header {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+/*ajusting how the chats title looks*/
+
+.settings-panel {
+    padding: 10px;
+    font-size: 12px;
+    background: #151515;
+}
+/*ajusting how the chats setting pannel looks*/
+
+.settings-panel input {
+    width: 100%;
+}
+/*Ajusting the input box on ai chatbots width, to ensure that it fits correctly*/
+
+#chat-box {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+/*ensuring that the ai chatbots chat box is set correctly, no overlapping ect*/
+.message {
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 6px;
+    max-width: 75%;
+}
+/*doing them same for ai's response*/
+.user {
+    background: #0078ff;
+    margin-left: auto;
+}
+/*doing the same for the user*/
+.bot {
+    background: var(--accent);
+}
+
+.input-area {
+    padding: 10px;
+}
+
+#micBtn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background: #222;
+    color: white;
+    font-size: 22px;
+    display: block;
+    margin: auto;
+}
+
+#micBtn.active {
+    box-shadow:
+        0 0 15px rgba(255,255,255,0.3),
+        0 0 40px rgba(255,0,0,0.6),
+        0 0 80px rgba(255,0,0,0.4);
+}

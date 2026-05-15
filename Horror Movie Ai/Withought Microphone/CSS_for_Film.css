@@ -1,0 +1,179 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --page-bg: rgb(0, 0, 0);
+    --ui-bg: #111;
+    --panel: #1a1a1a;
+    --accent: #2a2a2a;
+}
+
+body {
+    margin: 0;
+    background: var(--page-bg);
+    font-family: Arial, sans-serif;
+    color: white;
+    transition: background 1.5s ease;
+}
+/*ajusting the body  */
+/*and the background*/
+.Back{
+    padding: 10px;
+}
+/*adding padding to the background*/
+
+.chat-container {
+    width: 360px;
+    height: 620px;
+    margin: 0 auto;
+
+    background: var(--ui-bg);
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    box-shadow:
+        0 0 8px rgba(255,0,0,0.15),
+        0 0 20px rgba(255,0,0,0.2);
+}
+
+/*ajusting how the whole chat looks for the chatbot*/
+
+.chat-header {
+    background: var(--panel);
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid #333;
+}
+/*ajusting how the chats title looks*/
+
+.settings-panel {
+    background: #151515;
+    padding: 10px;
+    font-size: 12px;
+    border-bottom: 1px solid #333;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+/*ajusting how the chats setting pannel looks*/
+
+.settings-panel h3 {
+    margin: 0 0 8px;
+    font-size: 13px;
+    color: #aaa;
+}
+
+/*Ajusting the input box on ai chatbots width, to ensure that it fits correctly*/
+.settings-panel label {
+    display: block;
+    margin-top: 6px;
+    color: #777;
+}
+
+/*Ajusting the css of the settings pannels label*/
+
+.settings-panel input[type="range"] {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*Ajusting the css of the settings pannels input for ramge*/
+.settings-panel input {
+    max-width: 100%
+}
+
+/*Ajusting the css of the settings pannels inputs*/
+#chat-box {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;            
+    flex-direction: column;   
+}
+
+/*ensuring that the ai chatbots chat box is set correctly, no overlapping ect*/
+.message {
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 75%;
+    font-size: 14px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/*doing them same for ai's response*/
+.user {
+    background: #0078ff;
+    align-self: flex-end;
+}
+
+.bot {
+    background: var(--accent);
+    align-self: flex-start;
+}
+
+/*doing the same for the user*/
+.input-area {
+    padding: 10px;
+    border-top: 1px solid #333;
+    flex-shrink: 0;
+}
+
+/*Ajusting the css of the input area*/
+input {
+    width: 100%;
+    padding: 10px;
+    background: #1a1a1a;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/*Ajusting all inputs css*/
+input:focus {
+    outline: none;
+}
+
+/*removing outline on input*/
+.glitch {
+    animation: glitch 0.15s infinite;
+}
+
+/*adding glitch animation css*/
+@keyframes glitch {
+    0% { transform: translate(1px, 0); }
+    50% { transform: translate(-1px, 0); }
+    100% { transform: translate(0, 0); }
+}
+
+
+.settings-panel input[type="text"] {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+}
+
+/*ajusting the setting pannels css, on the input text*/
+
+/*ajusting the glow divs, css*/
+.glow-wrapper {
+    width: 100%;
+    height: 100%;     
+    border-radius: 16px;
+    margin: 40px auto;
+    background: transparent;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    padding: 60px;
+}
+
