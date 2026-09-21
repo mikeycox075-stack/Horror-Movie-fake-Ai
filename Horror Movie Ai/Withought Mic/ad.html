@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- This is the add page that users will see when the load up the programme for the movie.-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Advertisement</title>
+<!-- Start of Inline CSS -->
+<style>
+body {
+    margin: 0;
+    background: black;
+    font-family: Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.popup {
+    background: #111;
+    padding: 20px;
+    width: 300px;
+    color: white;
+}
+
+#eyes {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    max-width: 500px;
+
+    opacity: 0;
+    pointer-events: none;
+
+    filter: brightness(0.6) contrast(1.1) blur(2px)
+            drop-shadow(0 0 6px rgba(255,0,0,0.2));
+
+    mix-blend-mode: lighten;
+    transition: opacity 0.2s ease;
+}
+</style>
+<!-- End of inline CSS -->
+</head>
+
+<body>
+
+<div class="popup">
+    <!-- Setting up what the user will see -->
+    <h2>Talk to your favourite characters</h2>
+    <p>Create or replicate personalities using A.I</p>
+    <button onclick="launch()">Download</button>
+</div>
+<!-- Adding in the image -->
+<img id="eyes" src="eyes.jpg">
+
+<script>
+    // When the porgram is launched, the eyes will appear for a brief second
+function launch() {
+    const eyes = document.getElementById("eyes");
+    //changing the opacity of eyes
+    eyes.style.opacity = "0.12";
+    //Ajusting how long they will appear
+    setTimeout(() => {
+        eyes.style.opacity = "0";
+    }, 240);
+
+    setTimeout(() => {
+        window.location.href = "Main Ai Chatbot.html";
+    }, 380);
+}
+</script>
+<!-- End of inline JS -->
+</body>
+</html>
